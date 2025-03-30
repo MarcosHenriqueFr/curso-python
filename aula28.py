@@ -1,11 +1,11 @@
 
 valor_nome = input('Digite o seu nome: ')
-valor_idade = input('Digite a sua idade: ') or '0'
+valor_idade = input('Digite a sua idade: ')
 
 nome = valor_nome
 idade = int(valor_idade)
 
-if len(nome) == 0 or idade == 0:
+if not nome and not idade:
     print('Os campos não foram digitados!!!')
 else:
     print(f'Seu nome é {nome}')
