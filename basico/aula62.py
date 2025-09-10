@@ -4,7 +4,21 @@
 # O mesmo processo do primeiro + incluir o primeiro digito e mesma soma e multiplicação a partir
 # de uma contagem regressiva começando de 11
 
-cpf_enviado = '95970033090'
+import re
+
+# cpf_enviado = '630.930.380-57'.replace('.', '').replace('-', '')
+
+entrada_usuario = input('Insira o CPF [630.930.380-57]: ')
+# Mais 'imune' a erros de input do usuario
+cpf_enviado = re.sub(
+    r'[^0-9]',
+    '',
+    entrada_usuario
+)
+
+if (entrada_usuario[0] * len(entrada_usuario)) == entrada_usuario:
+    print('Entrada inválida com os mesmos caracteres')
+
 nove_digitos = cpf_enviado[:9]
 contagem_regressiva_1 = 10
 soma = 0
