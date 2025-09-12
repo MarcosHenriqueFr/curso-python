@@ -4,6 +4,7 @@
 # O escopo global -> é mais um escopo do módulo
 x = 'de fora'
 
+# As funções são colocadas na call stack -> Pilha de Chamadas
 def escopo():
     def outra_funcao():
         # global x; para mudar globalmente -> não é uma boa prática
