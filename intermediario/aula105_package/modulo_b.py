@@ -1,0 +1,2 @@
+
+frase = 'Bom dia'
